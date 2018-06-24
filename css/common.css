@@ -1,0 +1,184 @@
+
+.container-fluid {
+    padding: 0;
+}
+
+.row{
+    margin-left:0;
+    margin-right:0;
+}
+
+/*导航栏开始*/
+#nav {
+    background: #f2e2b9;
+}
+
+#nav .logo {
+    width: 50%;
+    margin-left:10%;
+}
+
+#nav .navbar-brand {
+    padding-top: 7px;
+}
+
+#nav .navbar-toggle {
+    border: none;
+    background: none;
+}
+
+#nav .navbar-brand>a {
+    padding: 0;
+}
+
+#nav button {
+
+}
+
+#nav .navbar-toggle {
+    border: none;
+}
+
+#nav .navbar-toggle .icon-bar {
+    width: 30px;
+    height: 4px;
+    margin-top: 6px;
+    background-color: green;
+}
+
+#nav.navbar-default .navbar-collapse,
+#nav.navbar-default .navbar-form{
+    /*border-color:#fff;*/
+    border-top:2px solid #fff;
+}
+
+
+.navbar-fixed-top .navbar-collapse,
+.navbar-fixed-bottom .navbar-collapse {
+    max-height: none;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #fff;
+    background: #cc5e17;
+}
+
+#nav #navbar-menu .navbar-nav {
+    background: #f2e2b9;
+    margin-bottom: 0;
+}
+
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #cc5e17;
+}
+
+#nav #navbar-menu .navbar-nav {
+    margin-top: -1px;
+}
+
+#nav #navbar-menu .navbar-nav li:last-child a {
+    border-bottom: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+    display: block;
+    font-size: 16px;
+    border-bottom: 2px solid #fff;
+    color: #cc5e17;
+    padding-top:3%;
+    padding-bottom:3%;
+}
+
+/*导航栏部分结束*/
+
+
+
+
+
+/*banner图片部分*/
+/*.content .banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 44% 0;
+}*/
+/*banner图片部分结束*/
+
+
+/*底部开始*/
+
+footer {
+    margin-top: 66px;
+    background-image: url("../image/bg2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+footer dl {
+    margin-top: 30px;
+}
+
+footer dl dd {
+    font: 400 16px "苹方";
+}
+
+footer dl dt {
+    font: 200 14px "苹方";
+    height: 26px;
+    line-height: 26px;
+    /*font-size: 22px;*/
+}
+
+footer dl dd a,
+footer dl dt a {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+
+footer dl .line {
+    width: 60%;
+    height: 1px;
+    background-color: #726e62;
+    margin: 10px auto;
+}
+
+footer .remark {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #726e62;
+    line-height: 25px;
+    padding-top: 10px;
+    padding-bottom:40px;
+}
+
+footer .remark .box {
+    width: 100%;
+    position: relative;
+    height:20px;
+}
+
+footer .remark .box p {
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 100;
+    font-family: "苹方";
+    transform: scale(1,0.80);
+    transform-origin: 0 0;
+    -webkit-transform: scale(1,0.80);
+    /* Safari 和 Chrome */
+    -webkit-transform-origin: 0 0;
+    /* Safari 和 Chrome */
+    transform: translateX(-50%);
+}
+
+/*底部结束*/
