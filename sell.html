@@ -6,25 +6,708 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>台华商城</title>
     <link href="css/lib/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/lib/swiper.min.css">
+    <link rel="stylesheet" href="css/lib/mobiscroll.custom-2.16.1.min.css">
     <link href="css/base.css" rel="stylesheet" type="text/css" />
     <link href="css/common.css" rel="stylesheet" type="text/css" />
-    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/sell.css" rel="stylesheet" type="text/css" />
     <script src="js/lib/jquery-1.11.1.js"></script>
     <script src="js/lib/bootstrap.js"></script>
+    <script src="js/lib/mobiscroll.custom-2.16.1.min.js"></script>
+    <script src="js/util/clamp.js"></script>
     <style>
-    .box2 {
-        margin-top: 300px;
-    }
+        .model1 p,
+        .model2 p {
+            width: 96%;
+            color: #cc5e17;
+            margin: 0 auto;
+            font: 700 14px "PingFang-SC";
+            margin-top: 15px;
+            margin-bottom: 5px;
+
+        }
+        .model1 i,
+        .model2 i {
+            display: block;
+            width: 96%;
+            height: 0;
+            margin: 0 auto;
+            padding-bottom: 2px;
+            background: #F5A63A;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 230px;
+            padding: 25px 25px 0;
+        }
+
+        .swiper-slide {
+            border: 5px solid #fff;
+            text-align: center;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: #fff;
+            z-index: 9999999;
+            /*padding-left:0;*/
+            padding: 20px;
+            background-clip: content-box;
+            background-repeat: no-repeat;
+        }
+
+
+        .swiper-slide .small {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 52%;
+            background: #fff;
+        }
+
+        .swiper-slide .small .title {
+            height: 20px;
+            font: 600 12px "Microsoft Yahei";
+            color: #5a281b;
+            position: absolute;
+            top: 8px;
+            left: 4px;
+            line-height: 14px;
+        }
+
+        .swiper-slide .small .map {
+            position: absolute;
+            font: 500 12px "Microsoft Yahei";
+            color: #5a281b;
+            top: 35%;
+            left: 0;
+
+        }
+
+        .swiper-slide .small .tel {
+            position: absolute;
+            padding: 2px;
+            /* height: 22px;
+            line-height: 16px; */
+            color: #5a281b;
+            font-size: 12px;
+            top: 73%;
+            left: 0;
+        }
+
+        .small span {
+            line-height: 20px;
+        }
+        .swiper-button-next,
+        .swiper-container-rtl .swiper-button-prev {
+            background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23F5A63A'%2F%3E%3C%2Fsvg%3E");
+
+            left: auto;
+        }
+
+/* .swiper-button-next{
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23F5A63A'%2F%3E%3C%2Fsvg%3E");} */
+        
+
+
+        .swiper-button-prev,
+        .swiper-container-rtl .swiper-button-next {
+            background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23F5A63A'%2F%3E%3C%2Fsvg%3E");            right: -10px;
+            right: auto;
+        }
+        /* .swiper-button-next{
+
+                width: 15px;
+                height: 73px;
+                background-size: 17px 30px;       
+        } */
+
+        .swiper-button-prev,
+        .swiper-button-next{
+            background-size: 30px 30px;    
+            margin: 0 -10px;
+
+        }
+
+
+
+
+        .model1 .map img,
+        .model1 .tel img{
+            width:16px;
+            height:16px;
+            margin-left:-2px;
+            vertical-align: top;
+        }
+
+
+        /* 门店 */
+
+        .model2 .shop {
+            padding-bottom: 30px;
+
+        }
+
+        .model2 .shop a {
+            display: block;
+        }
+        .model2 .shop .map img,
+        .model2 .shop .tel img{
+            width:16px;
+            height:16px;
+            margin-left:-2px;
+        }
+
+        .model2 .shop span {
+            line-height: 20px;
+        }
+
+        .model2 .shop .shop_l,
+        .model2 .shop .shop_r {
+            margin-top: 30px;
+
+        }
+
+        .model2 .shop .title{
+            height: 20px;
+            font: 600 12px "Microsoft Yahei";
+            color: #5a281b;
+            line-height: 14px;
+        }
+
+        .model2 .shop .map span{
+            color: #5a281b;
+            font: 500 12px "PingFang-SC";
+        }
+
+        .model2 .shop .tel span{
+            line-height: 25px;
+            color: #5a281b;
+            font: 400 12px "PingFang-SC";
+        }
+        #current-area{
+            width:96%;
+            position:relative;
+            margin:12px auto;
+            height:30px;
+            /* border-bottom:1px solid #ccc; */
+            /* margin-top:20px; */
+            
+
+        }
+
+ .tmp{
+            width:100%;
+            position:relative;
+            margin:12px auto;
+            height:30px;
+            /* margin-top:20px; */
+            border:none;
+            border-bottom: 1px solid #dfdfdf;
+        }
+
+        #current-area .clear{
+            overflow:visible;
+        
+        }
+        #current-area .mbase-menu-title{
+            /* color:#F5A63A;
+            display: inline; */
+            height:30px;
+            line-height:30px;
+            width:100%;
+            /* background:#efefef; */
+            border:none;
+        }
+        #current-area span{
+            position:absolute;
+            right:0;
+            line-height:50px;
+            z-index:999;
+           
+        /* .mbase-menu-txt{
+            width:60%;
+            height:30px;
+            background:#ccc;
+            margin-left:30%;
+        
+        } */
+
+        }
+
+        
     </style>
+
 </head>
 
-<body class="container">
+<body>
+    <!-- 首页头部开始 -->
+
     <script src="js/header.js"></script>
-    <!-- 内容部分开始 -->
-    <div class="box2">
-        <h1>我是第4页的内容</h1>
+    <!-- 首页头部结束 -->
+
+    <!-- 首页内容开始 -->
+    <div class="sell">
+        <div class="container-fluid">
+            <div class="content">
+                <!-- banner图片部分开始 -->
+                <div class="row banner" style="background-image:url(image/333.jpg)">
+                    <a class="col-xs-6 col-sm-6 tu_l">
+                        <img class="left" src="image/left.png" alt="">
+                        <p>面包竹篮</p>
+                        <i class=""></i>
+                    </a>
+                    <a class="col-xs-6 col-sm-6 tu_r">
+                        <img class="right" src="image/right.png" alt="">
+                        <p>絮雪粉</p>
+                        <i class=""></i>
+                    </a>
+                </div>
+                <!--banner图片部分结束 -->
+
+                <!-- 模型1 -->
+
+                <div class="model1">
+                    <p>面包竹篮门店地址</p>
+                    <i></i>
+                    <!-- 轮播图 -->
+
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background:url(image/bake5.png)">
+                                <div class="small">
+                                    <div class="title">面包竹篮（万达店）</div>
+                                    <a href="#" class="map">
+                                        <img src="image/address.png" alt="">
+                                        <span>上海市徐汇区漕溪路553号602室</span>
+                                    </a>
+                                    <a href="#" class="tel">
+                                        <img src="image/tel.png" alt="">
+                                        <span>20305591</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="background:url(image/bake3.png)">
+                                <div class="small">
+                                    <div class="title">面包竹篮（槽子店）</div>
+                                    <a href="#" class="map">
+                                        <img src="image/address.png" alt="">
+                                        <span>上海市徐汇区漕溪路553号602室</span>
+                                    </a>
+                                    <a href="#" class="tel">
+                                        <img src="image/tel.png" alt="">
+                                        <span>20305591</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="background:url(image/sell2.png)">
+                                <div class="small">
+                                    <div class="title">许雪芬（万达店）</div>
+                                    <a href="#" class="map">
+                                        <img src="image/address.png" alt="">
+                                        <span>上海市徐汇区漕溪路553号602室</span>
+                                    </a>
+                                    <a href="#" class="tel">
+                                        <img src="image/tel.png" alt="">
+                                        <span>20305591</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide" style="background:url(image/sell2.png)">
+                                <div class="small">
+                                    <div class="title">面包竹篮（槽子店）</div>
+                                    <a href="#" class="map">
+                                        <img src="image/address.png" alt="">
+                                        <span>上海市徐汇区漕溪路553号602室</span>
+                                    </a>
+                                    <a href="#" class="tel">
+                                        <img src="image/tel.png" alt="">
+                                        <span>20305591</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="background:url(image/sell2.png)">
+                                <div class="small">
+                                    <div class="title">许雪芬（万达店）</div>
+                                    <a href="#" class="map">
+                                        <img src="image/address.png" alt="">
+                                        <span>上海市徐汇区漕溪路553号602室</span>
+                                    </a>
+                                    <a href="#" class="tel">
+                                        <img src="image/tel.png" alt="">
+                                        <span>20305591</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="model2">
+                    <p>絮雪粉小包装销售门店</p>
+                    <i></i>
+                    <!-- 省份 -->
+                    <div id="current-area">
+                            <!-- <div class="mbase-menu-title">选择省份</div>
+                             -->
+                             <!-- <input id="lxl" type="text" class="mbase-menu-title" placeholder="请选择省份"> -->
+                            <span class="glyphicon glyphicon-menu-down"></span>
+                            <!-- <div class="mbase-menu-txt">未设置</div>
+                             -->
+                             <!-- <div class="mbase-menu-txt"></div> -->
+                            
+                            <!-- <div class="clear"></div> -->
+                    
+                    <ul id="current-area-list" style="display: none">
+                            <li>
+                                <div data-value="2">北京</div>
+                                <ul>
+                                    <li>
+                                        <span data-value="36">东城</span>
+                                        <ul>
+                                            <li data-value="55">西城</li>
+                                            <li data-value="56">崇文</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span data-value="37">南城</span>
+                                        <ul>
+                                            <li data-value="57">东海</li>
+                                            <li data-value="58">南海</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span data-value="38">北城</span>
+                                        <ul>
+                                            <li data-value="59">杭州</li>
+                                            <li data-value="60">西安</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div data-value="3">湖北</div>
+                                <ul>
+                                    <li>
+                                        <span data-value="39">武汉</span>
+                                        <ul>
+                                            <li data-value="61">汉口</li>
+                                            <li data-value="62">武昌</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span data-value="40">随州</span>
+                                        <ul>
+                                            <li data-value="63">广水</li>
+                                            <li data-value="64">孝感</li>
+                                            <li data-value="67">打打</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span data-value="41">襄阳</span>
+                                        <ul>
+                                            <li data-value="65">南漳</li>
+                                            <li data-value="66">宜城</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                    </ul>
+
+
+                </div>
+                               
+                    <div class="shop">
+                    <div class="row">
+                        <div class="shop_l col-xs-6">
+                            <div class="title">振华商厦精品店</div>
+                            <a href="#" class="map">
+                                <img src="image/address.png" alt="">
+                                <span>芝罘区西大街8号负1楼</span>
+                            </a>
+                            <a href="#" class="tel">
+                                <img src="image/tel.png" alt="">
+                                <span>20305591</span>
+                            </a>
+                        </div>
+                        <div class="shop_r col-xs-6">
+                            <div class="title">振华商厦精品店</div>
+                            <a href="#" class="map">
+                                <img src="image/address.png" alt="">
+                                <span>芝罘区西大街8号负1楼</span>
+                            </a>
+                            <a href="#" class="tel">
+                                <img src="image/tel.png" alt="">
+                                <span>20305591</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="shop_l col-xs-6">
+                            <div class="title">振华商厦精品店</div>
+                            <a href="#" class="map">
+                                <img src="image/tel.png" alt="">
+                                <span>芝罘区西大街8号负1楼</span>
+                            </a>
+                            <a href="#" class="tel">
+                                <img src="image/tel.png" alt="">
+                                <span>20305591</span>
+                            </a>
+                        </div>
+                        <div class="shop_r col-xs-6">
+                            <div class="title">振华商厦精品店</div>
+                            <a href="#" class="map">
+                                <img src="image/address.png" alt="">
+                                <span>芝罘区西大街8号负1楼</span>
+                            </a>
+                            <a href="#" class="tel">
+                                <img src="image/tel.png" alt="">
+                                <span>20305591</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="shop_l col-xs-6">
+                            <div class="title">振华商厦精品店</div>
+                            <a href="#" class="map">
+                                <img src="image/address.png" alt="">
+                                <span>芝罘区西大街8号负1楼</span>
+                            </a>
+                            <a href="#" class="tel">
+                                <img src="image/tel.png" alt="">
+                                <span>20305591</span>
+                            </a>
+                        </div>
+                        <div class="shop_r col-xs-6">
+                            <div class="title">振华商厦精品店</div>
+                            <a href="#" class="map">
+                                <img src="image/address.png" alt="">
+                                <span>芝罘区西大街8号负1楼</span>
+                            </a>
+                            <a href="#" class="tel">
+                                <img src="image/tel.png" alt="">
+                                <span>20305591</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="shop_l col-xs-6">
+                            <div class="title">振华商厦精品店</div>
+                            <a href="#" class="map">
+                                <img src="image/address.png" alt="">
+                                <span>芝罘区西大街8号负1楼</span>
+                            </a>
+                            <a href="#" class="tel">
+                                <img src="image/tel.png" alt="">
+                                <span>20305591</span>
+                            </a>
+                        </div>
+                        <div class="shop_r col-xs-6">
+                            <div class="title">振华商厦精品店</div>
+                            <a href="#" class="map">
+                                <img src="image/address.png" alt="">
+                                <span>芝罘区西大街8号负1楼</span>
+                            </a>
+                            <a href="#" class="tel">
+                                <img src="image/tel.png" alt="">
+                                <span>20305591</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="shop_l col-xs-6">
+                            <div class="title">振华商厦精品店</div>
+                            <a href="#" class="map">
+                                <img src="image/address.png" alt="">
+                                <span>芝罘区西大街8号负1楼</span>
+                            </a>
+                            <a href="#" class="tel">
+                                <img src="image/tel.png" alt="">
+                                <span>20305591</span>
+                            </a>
+                        </div>
+                        <div class="shop_r col-xs-6">
+                            <div class="title">振华商厦精品店</div>
+                            <a href="#" class="map">
+                                <img src="image/address.png" alt="">
+                                <span>芝罘区西大街8号负1楼</span>
+                            </a>
+                            <a href="#" class="tel">
+                                <img src="image/tel.png" alt="">
+                                <span>20305591</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="shop_l col-xs-6">
+                            <div class="title">振华商厦精品店</div>
+                            <a href="#" class="map">
+                                <img src="image/address.png" alt="">
+                                <span>芝罘区西大街8号负1楼</span>
+                            </a>
+                            <a href="#" class="tel">
+                                <img src="image/tel.png" alt="">
+                                <span>20305591</span>
+                            </a>
+                        </div>
+                        <div class="shop_r col-xs-6">
+                            <div class="title">振华商厦精品店</div>
+                            <a href="#" class="map">
+                                <img src="image/address.png" alt="">
+                                <span>芝罘区西大街8号负1楼</span>
+                            </a>
+                            <a href="#" class="tel">
+                                <img src="image/tel.png" alt="">
+                                <span>20305591</span>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+        </div>
     </div>
-    <!-- 内容部分结束 -->
+    </div>
+    <!-- 首页内容结束 -->
+
+    <!-- 首页底部开始 -->
     <script src="js/footer.js"></script>
+    <!-- 首页底部结束 -->
     <script src="js/common.js"></script>
+    <script src="js/lib/swiper.min.js"></script>
+
+
+    <script>
+        var appendNumber = 4;
+        var prependNumber = 1;
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 2,
+            centeredSlides: false,
+            spaceBetween: 25,
+            initialSlide: 0,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    // document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
+    //   e.preventDefault();
+    //   swiper.prependSlide([
+    //     '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
+    //     '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
+    //     ]);
+    // });
+    // document.querySelector('.prepend-slide').addEventListener('click', function (e) {
+    //   e.preventDefault();
+    //   swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
+    // });
+    // document.querySelector('.append-slide').addEventListener('click', function (e) {
+    //   e.preventDefault();
+    //   swiper.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
+    // });
+    // document.querySelector('.append-2-slides').addEventListener('click', function (e) {
+    //   e.preventDefault();
+    //   swiper.appendSlide([
+    //     '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
+    //     '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
+    //     ]);
+    // });
+
+    </script>
+
+
+
+    <script type="text/javascript">
+        
+            var that = this;
+            $("#current-area-list").mobiscroll().treelist({
+                theme:'auto',  
+                placeholder:'请选择省份',
+                //showOnTap:true,
+                rows:5,
+                //showInput:false,
+               // showScrollArrows:false,
+               //rtl:true,
+                showOnFocus:true,
+                lang: "zh",
+                display: 'bottom',
+                animate: 'slideup',
+               // setText:"确定",
+               // cancelText:"取消",
+                inputClass: 'tmp',
+
+
+
+
+
+                // headerText: '请您选择',
+                onSelect: function (valueText, inst) {
+                    var n = inst.getValue();
+                    var $list = $(this).children("li").eq(n[0]);
+                    var m1_id = $list.find("div").attr("data-value");
+                    var m2_id = $list.find("span").eq(n[1]).attr("data-value");
+                    var m3_id = $list.find("span").eq(n[1]).next().find('li').eq(n[2]).attr("data-value");
+                    var value = valueText.split('/');
+                    console.log(valueText, m1_id, value[0], m2_id, value[1], m3_id, value[2]);
+
+                    /*$.post("inc/person.org.php", {apart: "resume_base", current_area: m1+m2, current_areaPID: m1_id, current_areaCID: m2_id}, function (result) { 
+                        if (result == 'ok') { 
+                            $(that).find(".mbase-menu-txt").html(m1+m2); 
+                        } 
+                        else { 
+                            error('网络繁忙，请您稍后再试'); 
+                        } 
+                    });*/
+                    //后端处理部分
+                },
+                formatResult: function (data) {
+                    //自定义输出内容
+                    var $div = $("#current-area-list").children("li").eq(data[0]);
+                    return $div.find('div').text() + '/' + $div.find('span').eq(data[1]).text() + '/' + $div.find('span').eq(data[1]).next().find('li').eq(data[2]).text();
+                }
+            });
+            // $("input[id^=current-area-list]").focus();
+        
+       
+    </script>
+    <script>
+    $(".swiper-button-next").click(function(){
+        $(".swiper-button-next").css("border",0);
+    })
+    
+    </script>
+
+
+
+
 </body>

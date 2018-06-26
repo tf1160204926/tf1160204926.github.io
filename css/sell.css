@@ -1,0 +1,74 @@
+
+/*销售据点内容部分开始*/
+
+.content {
+    position: relative;
+    top: 65px;
+    background-size: cover;
+    background-image: url("../image/bgt.jpg");
+}
+
+
+/*销售据点内容的banner部分开始*/
+
+.content .banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 44% 0;
+}
+
+.content .banner a {
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+}
+
+.content .banner a.tu_l {
+    transform: translate(0, -50%);
+}
+
+.content .banner a.tu_r {
+    right: 50%;
+    transform: translate(100%, -50%);
+}
+
+.content .banner a img {
+    width: 80%;
+}
+
+.content .banner a p {
+    font: 800 18px "Microsoft Yahei";
+    color: #fff;
+    height: 20px;
+    padding-top: 4px;
+    line-height: 36px;
+}
+
+.content .banner a img.right {
+    width: 94%;
+}
+
+.content .banner a i {
+    display: inline-block;
+    border-bottom: 3px solid #F4A63C;
+    width: 28%;
+}
+
+/*销售据点内容的banner部分结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*销售据点内容部分结束*/
+
+
