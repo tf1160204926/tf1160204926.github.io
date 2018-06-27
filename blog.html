@@ -6,25 +6,161 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>台华商城</title>
     <link href="css/lib/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/lib/swiper.min.css">
     <link href="css/base.css" rel="stylesheet" type="text/css" />
     <link href="css/common.css" rel="stylesheet" type="text/css" />
-    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/blog.css" rel="stylesheet" type="text/css" />
     <script src="js/lib/jquery-1.11.1.js"></script>
     <script src="js/lib/bootstrap.js"></script>
-    <style>
-    .box2 {
-        margin-top: 300px;
-    }
-    </style>
+    <script src="js/lib/swiper.min.js"></script>
+    <script src="js/util/clamp.js"></script>
+
 </head>
 
-<body class="container">
+
+<body>
     <script src="js/header.js"></script>
     <!-- 内容部分开始 -->
-    <div class="box2">
-        <h1>我是第6页的内容</h1>
+    <div class="blog">
+        <div class="container-fluid">
+            <div class="content">
+                <!-- 大图片开始 -->
+                <div class="row banner" style="background-image:url(image/blog1.png)">
+                </div>
+                <!-- 大图片结束 -->
+
+                <!-- tab栏切换 -->
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#news" data-toggle="tab">最新资讯</a>
+                    </li>
+                    <li>
+                        <a href="#article" data-toggle="tab">美文推荐</a>
+                    </li>
+                </ul>
+
+                <div id="myTabContent" class="tab-content">
+                    <!-- 最新资讯部分 -->
+                    <div class="row tab-pane fade in active" id="news">
+                        <div class="news">
+                            <div class="col-xs-5 col-sm-6 pro_l">
+                                <img src="image/01.jpg" alt="">
+                            </div>
+                            <a href="#" class="col-xs-7 col-sm-6 pro_r">
+                                <p class="title">湖北江城来台华参观</p>
+                                <p class="points">2018年4月18日是阳光明媚的一天。在这 一天，湖北鑫江城及湖北烘焙界的朋友来 到烟台台华食品实业有限公司参观交流。 虽然只有短短的一上午，但是这次交聚精会神地方机构太快了会员
+                                </p>
+                                <p class="glyphicon glyphicon-time data">2018-04-23</p>
+                            </a>
+                        </div>
+
+                        <div class="news">
+                            <div class="col-xs-5 col-sm-6 pro_l">
+                                <img src="image/01.jpg" alt="">
+                            </div>
+                            <a href="#" class="col-xs-7 col-sm-6 pro_r">
+                                <p class="title">3.8妇女节活动——制作樱花酥</p>
+                                <p class="points">3月8日是妇女节，这天下午，烟台台华食 品实业有限公司迎来了烟台欣和企业食品 有限公司的所有女性员工，她们来到台华 食品，准备在这里自己...
+                                </p>
+                                <p class="glyphicon glyphicon-time data">2018-04-23</p>
+                            </a>
+                        </div>
+                        <div class="news">
+                            <div class="col-xs-5 col-sm-6 pro_l">
+                                <img src="image/01.jpg" alt="">
+                            </div>
+                            <a href="#" class="col-xs-7 col-sm-6 pro_r">
+                                <p class="title">湖北江城来台华参观</p>
+                                <p class="points">2018年4月18日是阳光明媚的一天。在这 一天，湖北鑫江城及湖北烘焙界的朋友来 到烟台台华食品实业有限公司参观交流。 虽然只有短短的一上午，但是这次交聚精会神地方机构太快了会员
+                                </p>
+                                <p class="glyphicon glyphicon-time data">2018-04-23</p>
+                            </a>
+                        </div>
+
+                        <div class="news">
+                            <div class="col-xs-5 col-sm-6 pro_l">
+                                <img src="image/01.jpg" alt="">
+                            </div>
+                            <a href="#" class="col-xs-7 col-sm-6 pro_r">
+                                <p class="title">3.17与欣和合作的亲子活动圆满结束</p>
+                                <p class="points">2018年3月17日下午，烟台台华食品实业 有限公司迎来了来自欣和的伙伴们，他们 来到台华和台华的师傅学习制作巧克力杯 子蛋糕。
+                                </p>
+                                <p class="glyphicon glyphicon-time data">2018-04-23</p>
+                            </a>
+                        </div>
+                        <div class="news">
+                            <div class="col-xs-5 col-sm-6 pro_l">
+                                <img src="image/01.jpg" alt="">
+                            </div>
+                            <a href="#" class="col-xs-7 col-sm-6 pro_r">
+                                <p class="title">台华絮雪粉开课迎春</p>
+                                <p class="points">2018年2月8日，今天是在台华学习的最 后一天，孙易良师傅根据之前了解到的情 况，制定了针对性的教学和讲解——蛋糕 胚的制作。
+                                </p>
+                                <p class="glyphicon glyphicon-time data">2018-04-23</p>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- 美文推荐部分 -->
+                    <div class="row tab-pane fade in active" id="article">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>台华面包竹篮开课啦</p>
+                                    <p class="substance points_con">经济的经济人口发快递海阔天空两个号法规和两个房间的快感开发客户覆盖大范甘迪</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>台华面包竹篮开课啦</p>
+                                    <p class="substance points_con">经济的经济人口发快递海阔天空两个号法规和两个房间的快感开发客户覆盖大范甘迪</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>台华面包竹篮开课啦</p>
+                                    <p class="substance points_con">经济的经济人口发快递海阔天空两个号法规和两个房间的快感开发客户覆盖大范甘迪</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>台华絮雪粉开课啦</p>
+                                    <p class="substance points_con">经济的经济人口发快递海阔天空两个号法规和两个房间的快感开发客户覆盖大范甘迪</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>台华絮雪粉开课啦啊啊啊啊啊啊</p>
+                                    <p class="substance points_con">经济的经济人口发快递海阔天空两个号法规和两个房间的快感开发客户覆盖大范甘迪</p>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
     <!-- 内容部分结束 -->
     <script src="js/footer.js"></script>
     <script src="js/common.js"></script>
+    <script>
+
+
+        // 兼容火狐浏览器多余文字省略号显示
+        // 最新资讯内容省略号
+        var pointsArr = document.getElementsByClassName("points");
+        console.log(pointsArr);
+        for (var i = 0; i < pointsArr.length; i++) {
+            $clamp(pointsArr[i], { clamp: 4, useNativeClamp: false });
+        }
+
+        // 美文推荐内容省略号
+        var pointsArr_con = document.getElementsByClassName("points_con");
+        console.log(pointsArr_con);
+        for (var i = 0; i < pointsArr_con.length; i++) {
+            $clamp(pointsArr_con[i], { clamp: 1, useNativeClamp: false });
+        }
+    </script>
 </body>

@@ -1,0 +1,147 @@
+
+/*首页内容部分开始*/
+
+.content {
+    width:100%;
+    position: relative;
+    top: 65px;
+    background-size: cover;
+    background-image: url("../image/bgt.jpg");
+    overflow:hidden;
+}
+
+
+/*首页banner部分开始*/
+
+.content .banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 44% 0;
+}
+
+/* tab栏切换 */
+.blog{
+    width:100%;
+}
+.blog #myTab{
+    width:100%;
+    margin: 25px auto;
+    text-align:center;
+    margin-left:14%;
+
+}
+.blog .nav-tabs{
+    border:none;
+    margin: 0 auto;
+}
+.blog #myTab li{
+    width:36%;
+    /* border:1px solid #ccc; */
+}
+.blog #myTab li:first-child{
+    border-right:none;
+    /* margin-right:0; */
+}
+.blog #myTab li a{
+    border:1px solid #ccc;
+    margin-right:0;
+    color:#999;
+    box-sizing:padding-box;
+    -webkit-box-sizing:padding-box;
+    -moz-box-sizing:padding-box;
+    -ms-box-sizing:padding-box;
+    border-radius:0;
+}
+.blog #myTab li.active a{
+    color:rgba(0,0,0,1);
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    color:#416F37;
+    font:700 14px "PingFang-SC";
+    font-family:"PingFang-SC-Medium";
+    border:1px solid #f2e2ba;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+    background-color: #f2e2ba;
+    border:none;
+    color:#416F37;
+    font:700 14px "PingFang-SC";
+}
+
+.blog #myTabContent img{
+    width: 100%;
+}
+.blog #myTabContent .news,
+.blog #myTabContent .article{
+    overflow:hidden;
+    margin:0 15px;
+    border-bottom:1px solid#eeeeee;
+    margin:10px auto;
+    position: relative;
+    padding-bottom:10px;
+}
+
+/* 最新资讯部分 */
+.blog #myTabContent .news .pro_l{
+    padding-right:0;
+}
+
+
+.blog #myTabContent .news a{
+    padding:0 8px 0 10px;
+    color:#1a1a1a;
+    font-family:"PingFang-SC";
+    /* font:700 14px "PingFang-SC"; */
+}
+.blog #myTabContent .news .title{
+    /* line-height:14px; */
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:0;
+}
+.blog #myTabContent .news p.points{
+    font-size:12px;
+    margin-bottom:0;
+    margin-top:0;
+}
+.blog #myTabContent .news p.data{
+    width: 100%;
+    height:0;
+    font-size:12px;
+    text-align:right;
+}
+.blog #myTabContent .news span{
+    display: inline-block;
+    font-size:12px;
+    text-align:right;
+    height:14px;
+    /* margin-top:5px; */
+    position: absolute;
+    right:0;
+    bottom:-10px;
+}
+
+
+/* 美文推荐部分 */
+
+.blog #article ul{
+    list-style: disc;
+}
+.blog #article li{
+    margin-left:10%;
+    margin-top:25px;
+}
+.blog #article li p:first-child{
+    color:#5a281b;
+    font:700 14px "PingFang-SC";
+}
+.blog #article li p.substance{
+    color:#333;
+    font:100 12px "PingFang-SC-Medium";
+    line-height:16px;
+
+}
