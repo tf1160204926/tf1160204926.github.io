@@ -1,0 +1,55 @@
+.content {
+    position: relative;
+    top: 65px;
+    background-size: cover;
+    background-image: url("../image/bgt.jpg");
+    padding: 10px 0 !important;
+}
+
+.video_list .row {
+    /*width: 100%;*/
+    margin: 15px;
+    border-bottom:1px solid #d9d9d9;
+    padding-bottom:15px;
+}
+
+.video_list .row .pro_l {
+    padding: 0;
+    background: #fff;
+    position: relative;
+}
+
+.video_list .row .pro_l img {
+    width: 100%;
+    box-shadow: 2px 2px 2px 1px #aaa;
+}
+.video_list .row .pro_l .play{
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    text-align: center;
+}
+
+.video_list .row .pro_l .play span{
+    display: block;
+    line-height:36px;
+    color:#fff;
+    font-size:20px;
+}
+
+.video_list .row .pro_r p.title{
+    font: 700 14px "PingFang-SC";
+    color:#000;
+    margin-top:10px;
+}
+.video_list .row .pro_r p.time{
+    font: 400 12px "MicrosoftYaHei";
+    color:#808080;
+}

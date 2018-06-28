@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>台华商城</title>
+    <link href="css/lib/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <link href="css/activity.css" rel="stylesheet" type="text/css" />
+    <script src="js/lib/jquery-1.11.1.js"></script>
+    <script src="js/lib/bootstrap.js"></script>
+    <script src="js/util/clamp.js"></script>
+</head>
+
+
+<body>
+    <!-- 首页头部开始 -->
+    <script src="js/header.js"></script>
+    <!-- 首页头部结束 -->
+
+    <!-- 首页内容开始 -->
+    <div class="activity_list">
+        <div class="container-fluid">
+            <div class="content">
+
+                <!-- 视频介绍部分开始 -->
+                <div class="activity">
+                    <div class="row">
+                        <div class="col-xs-5 pro_l">
+                            <img src="image/01.jpg" alt="">
+                        </div>
+                        <a href="#" class="col-xs-7 pro_r">
+                            <p class="title">蛋糕制造教学</p>
+                            <p class="time">时间：2018-04-25</p>
+                            <p class="substance points">2018年6月，台华安居客大口大口地方两个灵魂上课进度加快升级丰富的方面可靠估计经济法共和国更符合客观圣诞节是否的国家开发机构合法化给客户可根据个房间很干净了给客户</p>
+                        </a>
+                    </div>
+                    <div class="row">
+                            <div class="col-xs-5 pro_l">
+                                <img src="image/01.jpg" alt="">
+                            </div>
+                            <a href="#" class="col-xs-7 pro_r">
+                                <p class="title">蛋糕制造教学</p>
+                                <p class="time">时间：2018-04-25</p>
+                                <p class="substance points">2018年6月，台华安居客大口大口地方两个灵魂上课进度加快升级丰富的方面可靠估计经济法共和国更符合客观圣诞节是否的国家开发机构合法化给客户可根据个房间很干净了给客户</p>
+                            </a>
+                        </div>
+                        <div class="row">
+                                <div class="col-xs-5 pro_l">
+                                    <img src="image/01.jpg" alt="">
+                                </div>
+                                <a href="#" class="col-xs-7 pro_r">
+                                    <p class="title">蛋糕制造教学</p>
+                                    <p class="time">时间：2018-04-25</p>
+                                    <p class="substance points">2018年6月，台华安居客大口大口地方两个灵魂上课进度加快升级丰富的方面可靠估计经济法共和国更符合客观圣诞节是否的国家开发机构合法化给客户可根据个房间很干净了给客户</p>
+                                </a>
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-5 pro_l">
+                                        <img src="image/01.jpg" alt="">
+                                    </div>
+                                    <a href="#" class="col-xs-7 pro_r">
+                                        <p class="title">蛋糕制造教学</p>
+                                        <p class="time">时间：2018-04-25</p>
+                                        <p class="substance points">2018年6月，台华安居客大口大口地方两个灵魂上课进度加快升级丰富的方面可靠估计经济法共和国更符合客观圣诞节是否的国家开发机构合法化给客户可根据个房间很干净了给客户</p>
+                                    </a>
+                                </div>
+                </div>
+                <!-- 商品介绍部分结束 -->
+            </div>
+        </div>
+    </div>
+    <!-- 首页内容结束 -->
+
+    <!-- 首页底部开始 -->
+    <script src="js/footer.js"></script>
+    <!-- 首页底部结束 -->
+    <script src="js/common.js"></script>
+    <script>
+        // 兼容火狐浏览器多余文字省略号显示
+        var pointsArr = document.getElementsByClassName("points");
+        console.log(pointsArr);
+        for (var i = 0; i < pointsArr.length; i++) {
+            $clamp(pointsArr[i], { clamp: 2, useNativeClamp: false });
+        }
+
+    </script>
+
+</body>

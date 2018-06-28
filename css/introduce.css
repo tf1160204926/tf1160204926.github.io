@@ -129,7 +129,7 @@
     width: 100%;
     font-size: 12px;
     font-weight: 550;
-    font-family: "苹方";
+    font-family: "PingFang SC";
     line-height:14px;
 /*    transform: scale(0.90);
     transform-origin: 0 0;
@@ -149,7 +149,7 @@
     padding:2px;
     font-size: 12px;
     font-weight: 500;
-    font-family: "苹方";
+    font-family: "PingFang SC";
     transform: scale(0.9);
     transform-origin: 0 0;
     -webkit-transform: scale(0.9);
@@ -303,7 +303,7 @@
 
 .introduce .model2 .four .text .details {
     position: absolute;
-    width: 66px;
+    width: 70px;
     height: 25px;
     border-radius: 12px;
     text-align: center;

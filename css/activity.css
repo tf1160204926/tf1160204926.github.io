@@ -1,0 +1,40 @@
+.content {
+    position: relative;
+    top: 65px;
+    background-size: cover;
+    background-image: url("../image/bgt.jpg");
+    padding: 10px 0 !important;
+}
+
+.activity_list .row {
+    /*width: 100%;*/
+    margin: 15px;
+    border-bottom:1px solid #d9d9d9;
+    padding-bottom:15px;
+}
+
+.activity_list .row .pro_l {
+    padding: 0;
+    background: #fff;
+    position: relative;
+}
+
+.activity_list .row .pro_l img {
+    width: 100%;
+    box-shadow: 2px 2px 2px 1px #aaa;
+}
+.activity_list .row .pro_r p.title{
+    font: 700 14px "PingFang-SC";
+    color:#000;
+    margin-top:10px;
+}
+.activity_list .row .pro_r p.time{
+    font: 400 12px "MicrosoftYaHei";
+    color:#808080;
+}
+.activity_list .row .pro_r p.substance{
+    font: 400 12px "MicrosoftYaHei";
+    color:#808080;
+    margin-top:15px;
+    line-height:18px;
+}

@@ -1,0 +1,310 @@
+.lianhua{
+    width:100%;
+}
+.content {
+    position: relative;
+    top: 65px;
+    background-size: cover;
+    background-image: url("../image/bgt.jpg");
+    padding-bottom:50px;
+    overflow:hidden;
+}
+
+
+.content .banner {
+    width:100%;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    position: relative;
+    padding: 44% 0;
+}
+
+.row .pro_r {
+    padding-right: 0;
+    padding-left:0;
+}
+
+.row .pro_r .text-top {
+    font: 800 15px "Microsoft Yahei";
+    color: #cc5e18;
+    line-height: 23px;
+}
+
+.row .pro_r .title {
+    font-family: "Tahoma";
+    font-size: 14px;
+    line-height: 0;
+    color: #5a281b;
+    font-weight: 600;
+}
+
+.row .pro_r i {
+    display: inline-block;
+    border-bottom: 2px solid #f5a63a;
+    width: 25%;
+    display: block;
+    margin: 15px 0 6px 0;
+}
+
+.row .pro_r p {
+    text-indent: 25px;
+    color: #5a281b;
+    font-size: 12px;
+    font-family: "PingFang SC";
+    line-height: 20px;
+    font-weight: 600;
+/*    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    display: -webkit-box;
+*/}
+
+
+.lianhua .model .character{
+    padding: 0 20px 10px 0;
+    /*background:red;*/
+    text-align: center;
+}
+.lianhua .model .character .text-top{
+    height: 20px;
+    line-height: 24px;
+    margin-top:25px;
+}
+
+.lianhua .model .character i{
+    width: 10%;
+    margin: 0 auto 10px auto;
+    margin-left:49%;
+}
+
+/* 发展历史时间轴轮播图 */
+
+
+.swiper-container {
+    width: 100%;
+    height: 230px;
+    padding: 25px;
+}
+
+.model3 .swiper-slide {
+border: 5px solid #fff;
+text-align: center;
+/* Center slide text vertically */
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+position: relative;
+overflow: hidden;
+/* background: #fff; */
+z-index: 9999999;
+/*padding-left:0;*/
+padding: 20px;
+/* background:url(../image/brand5.png); */
+/* background-repeat: no-repeat !important; */
+/* background-size:cover; */
+}
+
+
+.swiper-slide .small {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 52%;
+    background: #fff;
+
+}
+
+.swiper-slide .small .title {
+    height: 20px;
+    font: 600 12px "Microsoft Yahei";
+    color: #5a281b;
+    position: absolute;
+    top: 8px;
+    left: 4px;
+    line-height: 14px;
+}
+
+.swiper-slide .small .map {
+    position: absolute;
+    font: 500 12px "Microsoft Yahei";
+    color: #5a281b;
+    top: 35%;
+    left: 0;
+}
+
+.swiper-slide .small .tel {
+    position: absolute;
+    padding: 2px;
+    /* height: 22px;
+    line-height: 16px; */
+    color: #5a281b;
+    font-size: 12px;
+    top: 73%;
+    left: 0;
+}
+
+.small span {
+    line-height: 20px;
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23F5A63A'%2F%3E%3C%2Fsvg%3E");
+    left: auto;
+}
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23F5A63A'%2F%3E%3C%2Fsvg%3E");            right: -10px;
+    right: auto;
+}
+.swiper-button-prev,
+.swiper-button-next{
+    background-size: 30px 30px;    
+    margin: -30px -10px;
+}
+.model .map img,
+.model .tel img{
+    width:16px;
+    height:16px;
+    margin-left:-2px;
+    /* vertical-align: top; */
+}
+
+/* 模式1轮播图样式 */
+.model .swiper-container {
+    background: url("../image/lianhua_bg.png") center no-repeat;
+    background-size: cover;
+}
+
+.model .swiper-slide,
+.model .swiper-slide-active{
+    /* width:80% !important; */
+    /* left:10%; */
+    /* height:100%; */
+    border:none;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.model .small{
+    padding-left:5px;
+}
+.model .small p{
+    font:700 14px "MicrosoftYaHei-Bold";
+    color: #cc5e17;
+    height: 20px;
+    line-height: 45px;
+    text-align:left;
+    /* margin-left:3px; */
+    
+}
+.model .small i{
+    display: block;
+    width: 20%;
+    height:2px;
+    background:#f5a63a;
+    margin-top:15px;
+    /* margin-left:3px; */
+}
+
+.model .swiper-slide .small {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.model .swiper-button-next,
+.model .swiper-container-rtl .swiper-button-prev {
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23FFFFFF'%2F%3E%3C%2Fsvg%3E");
+
+    left: auto;
+}
+.model .swiper-button-prev,
+.model .swiper-container-rtl .swiper-button-next {
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23FFFFFF'%2F%3E%3C%2Fsvg%3E");            right: -10px;
+    right: auto;
+}
+/* 公司发展历史时间轴轮播图结束 */
+
+
+/* 组织结构树开始 */
+.tree{
+    /* width:100%; */
+
+}
+.tree .row>div.col-xs-3{
+    padding:7.5px;
+}
+
+.tree .row .box{
+    text-align:center;
+    width:100%;
+    margin: 0 auto;
+    border:1px solid #ccc;
+    box-shadow: 3px 1px 10px 0 #aaa;
+    position: relative;
+    /* padding:10px 5px; */
+    height:80px;
+    padding:20% 2%;
+}
+.tree .box p{
+    font:400 12px "MicrosoftYaHei";
+    color:#5c5f23;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    margin-bottom:0;
+}
+.tree .box p.big{
+    font-size:14px;
+    font-family:"PingFang-SC";
+    font-weight:700;
+    /* line-height:16px; */
+}
+.tree .box .vertical_line{
+    position: absolute;
+    width:1px;
+    height:30px;
+    border-right:1px dashed #5a281b;
+    bottom:-30px;
+    left:50%;
+}
+.level_line{
+    width:75%;
+    height:1px;
+    border-bottom:1px dashed #5a281b;
+    margin:22px auto 10px auto;
+}
+.tree .center{
+    background:url(../image/lianhua2.png) center no-repeat;
+    background-size:cover;
+
+    width: 25%;
+    margin: 0 auto;
+    padding:10px;
+}
+.tree .center img{
+    width:100%;
+    display: block;
+}
+.tree .bottom .box .vertical_line{
+    top:-30px;
+}
+.tree .bottom .level_line{
+    margin-bottom:20px;
+    margin-top:10px;
+
+}
+
+/* 组织结构树结束 */

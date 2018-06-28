@@ -14,7 +14,7 @@
     <script src="js/lib/bootstrap.js"></script>
     <script src="js/lib/swiper.min.js"></script>
     <script src="js/util/clamp.js"></script>
-    
+
 </head>
 
 <body>
@@ -50,9 +50,9 @@
                             <a href="#" class="col-xs-4 img">
                                 <img src="image/bake2.png" alt="">
                             </a>
-                            <a  href="#" class="col-xs-8 img">
+                            <a href="#" class="col-xs-8 img">
                                 <img src="image/bake3.png" alt="">
-                                <div  id="playbtn">
+                                <div id="playbtn">
                                     <span class="glyphicon glyphicon-play"></span>
                                 </div>
                             </a>
@@ -60,7 +60,8 @@
                     </div>
                     <!--  <div class="more">更多&nbsp;</div> -->
                     <a href="video_list.html" class="more">
-                        更多&nbsp;<img src="image/play.png" alt="">
+                        更多&nbsp;
+                        <img src="image/play.png" alt="">
                     </a>
                 </div>
                 <!-- 展示模式2 -->
@@ -135,7 +136,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide" style="background:url(image/bake6.png)">
-                                <!-- <img src="image/bake6.png" alt=""> --> 
+                                <!-- <img src="image/bake6.png" alt=""> -->
                                 <div class="small">
                                     <div class="title  ">中西点心穿插课程</div>
                                     <div class="price">￥188</div>
@@ -169,27 +170,27 @@
     <script src="js/footer.js"></script>
     <script src="js/common.js"></script>
     <script>
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 2,
-        spaceBetween: 50,
-        initialSlide :1,
-         
-    	 autoplay: {
-			delay: 3000,//秒            
-			disableOnInteraction: true,//滑动不会失效
-		},
-		loop: true,//轮播
-        centeredSlides: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    })
-    // 兼容火狐浏览器多余文字省略号显示
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 2,
+            spaceBetween: 50,
+            initialSlide: 1,
+
+            autoplay: {
+                delay: 3000,//秒            
+                disableOnInteraction: true,//滑动不会失效
+            },
+            loop: true,//轮播
+            centeredSlides: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        })
+        // 兼容火狐浏览器多余文字省略号显示
         var pointsArr = document.getElementsByClassName("points");
         console.log(pointsArr);
-        for (var i=0;i<pointsArr.length;i++) {
-            $clamp(pointsArr[i], {clamp: 3, useNativeClamp: false});
-       }
+        for (var i = 0; i < pointsArr.length; i++) {
+            $clamp(pointsArr[i], { clamp: 3, useNativeClamp: false });
+        }
     </script>
 </body>

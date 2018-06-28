@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>台华商城</title>
+    <link href="css/lib/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <link href="css/contact.css" rel="stylesheet" type="text/css" />
+    <script src="js/lib/jquery-1.11.1.js"></script>
+    <script src="js/lib/bootstrap.js"></script>
+    <script src="js/util/clamp.js"></script>
+
+</head>
+
+<body>
+    <!-- 首页头部开始 -->
+    <script src="js/header.js"></script>
+    <!-- 首页头部结束 -->
+
+    <!-- 首页内容开始 -->
+    <div class="contact">
+        <div class="container-fluid">
+            <div class="content">
+                <!-- banner图片部分开始 -->
+                <div class="row banner" style="background-image:url(image/contact111.png)">
+                </div>
+                <!--banner图片部分结束 -->
+                <!-- 正文部分开始 -->
+                <div class="main">
+                    <!-- 模式1 左文字右图片 -->
+                    <div class="model1">
+                        <div class="row">
+                            <div class="model1_l col-xs-6">
+                                <p class="title">台华有限公司</p>
+                                <div class="address">
+                                    <span class="left">地址：</span>
+                                    <span class="right">山东省烟台市芝罘区环海路副28号</span>
+                                </div>
+                                <div class="tel">
+                                    <span class="left">电话：</span>
+                                    <span class="right">0535-3459999</span>
+                                </div>
+                            </div>
+                            <div class="model1_r col-xs-6">
+                                <img src="image/contact444.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 模式2 左文字右文字 -->
+                    <div class="model2">
+                        <p class="title">招聘岗位</p>
+                        <div class="row">
+                            <a href="#" class="col-xs-6">
+                                <p>生产管理人员</p>
+                                <p>有先关经验</p>
+                                <div class="tel">
+                                    <span class="left">电话：</span>
+                                    <span class="right">0535-3459999</span>
+                                </div>
+                            </a>
+                            <a href="#" class="col-xs-6">
+                                <p>面包竹篮外场服务人员</p>
+                                <p>形象气质佳，有亲和力</p>
+                                <div class="tel">
+                                    <span class="left">电话：</span>
+                                    <span class="right">0535-3459999</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 模式3 左文字 -->
+                    <div class="model3">
+                        <p class="title">面包竹篮加盟洽谈</p>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="tel">
+                                    <span class="left">电话：</span>
+                                    <span class="right">0535-3459999</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="title">絮雪粉经销商加盟洽谈</p>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="tel">
+                                    <span class="left">电话：</span>
+                                    <span class="right">0535-3459999</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 首页内容结束 -->
+
+    <!-- 首页底部开始 -->
+    <script src="js/footer.js"></script>
+    <!-- 首页底部结束 -->
+    <script src="js/common.js"></script>
+    <script>
+        // 兼容火狐浏览器多余文字省略号显示
+        var pointsArr_text = document.getElementsByClassName("points_text");
+        console.log(pointsArr_text);
+        for (var i = 0; i < pointsArr_text.length; i++) {
+            $clamp(pointsArr_text[i], { clamp: 3, useNativeClamp: false });
+        }
+
+    </script>
+
+</body>

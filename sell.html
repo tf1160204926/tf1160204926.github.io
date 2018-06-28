@@ -15,202 +15,6 @@
     <script src="js/lib/bootstrap.js"></script>
     <script src="js/lib/mobiscroll.custom-2.16.1.min.js"></script>
     <script src="js/util/clamp.js"></script>
-    <style>
-        .model1 p,
-        .model2 p {
-            width: 96%;
-            color: #cc5e17;
-            margin: 0 auto;
-            font: 700 14px "PingFang-SC";
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
-        .model1 i,
-        .model2 i {
-            display: block;
-            width: 96%;
-            height: 0;
-            margin: 0 auto;
-            padding-bottom: 2px;
-            background: #F5A63A;
-        }
-
-        .swiper-container {
-            width: 100%;
-            height: 200px;
-            padding: 25px 25px 0;
-        }
-
-        .swiper-slide {
-            border: 5px solid #fff;
-            text-align: center;
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            background: #fff;
-            z-index: 9999999;
-            /*padding-left:0;*/
-            padding: 20px;
-            background-clip: content-box;
-        }
-
-
-        .swiper-slide .small {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 52%;
-            background: #fff;
-        }
-
-        .swiper-slide .small .title {
-            height: 20px;
-            font: 600 12px "Microsoft Yahei";
-            color: #5a281b;
-            position: absolute;
-            top: 8px;
-            left: 4px;
-            line-height: 14px;
-        }
-
-        .swiper-slide .small .map {
-            position: absolute;
-            font: 500 12px "Microsoft Yahei";
-            color: #5a281b;
-            top: 35%;
-            left: 0;
-
-        }
-
-        .swiper-slide .small .tel {
-            position: absolute;
-            padding: 2px;
-            /* height: 22px;
-            line-height: 16px; */
-            color: #5a281b;
-            font-size: 12px;
-            top: 76%;
-            left: 0;
-        }
-
-        .small span {
-            line-height: 20px;
-        }
-        .swiper-button-next,
-        .swiper-container-rtl .swiper-button-prev {
-            background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23F5A63A'%2F%3E%3C%2Fsvg%3E");
-
-            left: auto;
-        }
-        .swiper-button-prev,
-        .swiper-container-rtl .swiper-button-next {
-            background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23F5A63A'%2F%3E%3C%2Fsvg%3E");            right: -10px;
-            right: auto;
-        }
-        .swiper-button-prev,
-        .swiper-button-next{
-            background-size: 30px 30px;    
-            margin: 0 -10px;
-        }
-        .model1 .map img,
-        .model1 .tel img{
-            width:16px;
-            height:16px;
-            margin-left:-2px;
-            vertical-align: top;
-        }
-        /* 门店 */
-
-        .model2 .shop {
-            padding-bottom: 30px;
-
-        }
-
-        .model2 .shop a {
-            display: block;
-        }
-        .model2 .shop .map img,
-        .model2 .shop .tel img{
-            width:16px;
-            height:16px;
-            margin-left:-2px;
-        }
-
-        .model2 .shop span {
-            line-height: 20px;
-        }
-
-        .model2 .shop .shop_l,
-        .model2 .shop .shop_r {
-            margin-top: 30px;
-
-        }
-
-        .model2 .shop .title{
-            height: 20px;
-            font: 600 12px "Microsoft Yahei";
-            color: #5a281b;
-            line-height: 14px;
-        }
-
-        .model2 .shop .map span{
-            color: #5a281b;
-            font: 500 12px "PingFang-SC";
-        }
-
-        .model2 .shop .tel span{
-            line-height: 25px;
-            color: #5a281b;
-            font: 400 12px "PingFang-SC";
-        }
-        #current-area{
-            width:96%;
-            position:relative;
-            margin:12px auto;
-            height:30px;
-        }
-
- .tmp{
-            width:100%;
-            position:relative;
-            margin:12px auto;
-            height:30px;
-            /* margin-top:20px; */
-            border:none;
-            border-bottom: 1px solid #dfdfdf;
-            padding-left:7px;
-        }
-
-        #current-area .clear{
-            overflow:visible;
-        
-        }
-        #current-area .mbase-menu-title{
-            height:30px;
-            line-height:30px;
-            width:100%;
-            border:none;
-        }
-        #current-area span{
-            position:absolute;
-            right:7px;
-            line-height:50px;
-            z-index:999;
-        }
-    </style>
 
 </head>
 
@@ -325,17 +129,17 @@
                     <i></i>
                     <!-- 省份 -->
                     <div id="current-area">
-                            <!-- <div class="mbase-menu-title">选择省份</div>
+                        <!-- <div class="mbase-menu-title">选择省份</div>
                              -->
-                             <!-- <input id="lxl" type="text" class="mbase-menu-title" placeholder="请选择省份"> -->
-                            <span class="glyphicon glyphicon-menu-down"></span>
-                            <!-- <div class="mbase-menu-txt">未设置</div>
+                        <!-- <input id="lxl" type="text" class="mbase-menu-title" placeholder="请选择省份"> -->
+                        <span class="glyphicon glyphicon-menu-down"></span>
+                        <!-- <div class="mbase-menu-txt">未设置</div>
                              -->
-                             <!-- <div class="mbase-menu-txt"></div> -->
-                            
-                            <!-- <div class="clear"></div> -->
-                    
-                    <ul id="current-area-list" style="display: none">
+                        <!-- <div class="mbase-menu-txt"></div> -->
+
+                        <!-- <div class="clear"></div> -->
+
+                        <ul id="current-area-list" style="display: none">
                             <li>
                                 <div data-value="2">北京</div>
                                 <ul>
@@ -389,170 +193,170 @@
                                     </li>
                                 </ul>
                             </li>
-                    </ul>
+                        </ul>
 
 
-                </div>
-                               
+                    </div>
+
                     <div class="shop">
-                    <div class="row">
-                        <div class="shop_l col-xs-6">
-                            <div class="title">振华商厦精品店</div>
-                            <a href="#" class="map">
-                                <img src="image/address.png" alt="">
-                                <span>芝罘区西大街8号负1楼</span>
-                            </a>
-                            <a href="#" class="tel">
-                                <img src="image/tel.png" alt="">
-                                <span>20305591</span>
-                            </a>
+                        <div class="row">
+                            <div class="shop_l col-xs-6">
+                                <div class="title">振华商厦精品店</div>
+                                <a href="#" class="map">
+                                    <img src="image/address.png" alt="">
+                                    <span>芝罘区西大街8号负1楼</span>
+                                </a>
+                                <a href="#" class="tel">
+                                    <img src="image/tel.png" alt="">
+                                    <span>20305591</span>
+                                </a>
+                            </div>
+                            <div class="shop_r col-xs-6">
+                                <div class="title">振华商厦精品店</div>
+                                <a href="#" class="map">
+                                    <img src="image/address.png" alt="">
+                                    <span>芝罘区西大街8号负1楼</span>
+                                </a>
+                                <a href="#" class="tel">
+                                    <img src="image/tel.png" alt="">
+                                    <span>20305591</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="shop_r col-xs-6">
-                            <div class="title">振华商厦精品店</div>
-                            <a href="#" class="map">
-                                <img src="image/address.png" alt="">
-                                <span>芝罘区西大街8号负1楼</span>
-                            </a>
-                            <a href="#" class="tel">
-                                <img src="image/tel.png" alt="">
-                                <span>20305591</span>
-                            </a>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="shop_l col-xs-6">
-                            <div class="title">振华商厦精品店</div>
-                            <a href="#" class="map">
-                                <img src="image/tel.png" alt="">
-                                <span>芝罘区西大街8号负1楼</span>
-                            </a>
-                            <a href="#" class="tel">
-                                <img src="image/tel.png" alt="">
-                                <span>20305591</span>
-                            </a>
+                        <div class="row">
+                            <div class="shop_l col-xs-6">
+                                <div class="title">振华商厦精品店</div>
+                                <a href="#" class="map">
+                                    <img src="image/tel.png" alt="">
+                                    <span>芝罘区西大街8号负1楼</span>
+                                </a>
+                                <a href="#" class="tel">
+                                    <img src="image/tel.png" alt="">
+                                    <span>20305591</span>
+                                </a>
+                            </div>
+                            <div class="shop_r col-xs-6">
+                                <div class="title">振华商厦精品店</div>
+                                <a href="#" class="map">
+                                    <img src="image/address.png" alt="">
+                                    <span>芝罘区西大街8号负1楼</span>
+                                </a>
+                                <a href="#" class="tel">
+                                    <img src="image/tel.png" alt="">
+                                    <span>20305591</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="shop_r col-xs-6">
-                            <div class="title">振华商厦精品店</div>
-                            <a href="#" class="map">
-                                <img src="image/address.png" alt="">
-                                <span>芝罘区西大街8号负1楼</span>
-                            </a>
-                            <a href="#" class="tel">
-                                <img src="image/tel.png" alt="">
-                                <span>20305591</span>
-                            </a>
-                        </div>
-                    </div>
-
-
-
-                    <div class="row">
-                        <div class="shop_l col-xs-6">
-                            <div class="title">振华商厦精品店</div>
-                            <a href="#" class="map">
-                                <img src="image/address.png" alt="">
-                                <span>芝罘区西大街8号负1楼</span>
-                            </a>
-                            <a href="#" class="tel">
-                                <img src="image/tel.png" alt="">
-                                <span>20305591</span>
-                            </a>
-                        </div>
-                        <div class="shop_r col-xs-6">
-                            <div class="title">振华商厦精品店</div>
-                            <a href="#" class="map">
-                                <img src="image/address.png" alt="">
-                                <span>芝罘区西大街8号负1楼</span>
-                            </a>
-                            <a href="#" class="tel">
-                                <img src="image/tel.png" alt="">
-                                <span>20305591</span>
-                            </a>
-                        </div>
-                    </div>
 
 
 
-                    <div class="row">
-                        <div class="shop_l col-xs-6">
-                            <div class="title">振华商厦精品店</div>
-                            <a href="#" class="map">
-                                <img src="image/address.png" alt="">
-                                <span>芝罘区西大街8号负1楼</span>
-                            </a>
-                            <a href="#" class="tel">
-                                <img src="image/tel.png" alt="">
-                                <span>20305591</span>
-                            </a>
+                        <div class="row">
+                            <div class="shop_l col-xs-6">
+                                <div class="title">振华商厦精品店</div>
+                                <a href="#" class="map">
+                                    <img src="image/address.png" alt="">
+                                    <span>芝罘区西大街8号负1楼</span>
+                                </a>
+                                <a href="#" class="tel">
+                                    <img src="image/tel.png" alt="">
+                                    <span>20305591</span>
+                                </a>
+                            </div>
+                            <div class="shop_r col-xs-6">
+                                <div class="title">振华商厦精品店</div>
+                                <a href="#" class="map">
+                                    <img src="image/address.png" alt="">
+                                    <span>芝罘区西大街8号负1楼</span>
+                                </a>
+                                <a href="#" class="tel">
+                                    <img src="image/tel.png" alt="">
+                                    <span>20305591</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="shop_r col-xs-6">
-                            <div class="title">振华商厦精品店</div>
-                            <a href="#" class="map">
-                                <img src="image/address.png" alt="">
-                                <span>芝罘区西大街8号负1楼</span>
-                            </a>
-                            <a href="#" class="tel">
-                                <img src="image/tel.png" alt="">
-                                <span>20305591</span>
-                            </a>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="shop_l col-xs-6">
-                            <div class="title">振华商厦精品店</div>
-                            <a href="#" class="map">
-                                <img src="image/address.png" alt="">
-                                <span>芝罘区西大街8号负1楼</span>
-                            </a>
-                            <a href="#" class="tel">
-                                <img src="image/tel.png" alt="">
-                                <span>20305591</span>
-                            </a>
-                        </div>
-                        <div class="shop_r col-xs-6">
-                            <div class="title">振华商厦精品店</div>
-                            <a href="#" class="map">
-                                <img src="image/address.png" alt="">
-                                <span>芝罘区西大街8号负1楼</span>
-                            </a>
-                            <a href="#" class="tel">
-                                <img src="image/tel.png" alt="">
-                                <span>20305591</span>
-                            </a>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="shop_l col-xs-6">
-                            <div class="title">振华商厦精品店</div>
-                            <a href="#" class="map">
-                                <img src="image/address.png" alt="">
-                                <span>芝罘区西大街8号负1楼</span>
-                            </a>
-                            <a href="#" class="tel">
-                                <img src="image/tel.png" alt="">
-                                <span>20305591</span>
-                            </a>
+
+                        <div class="row">
+                            <div class="shop_l col-xs-6">
+                                <div class="title">振华商厦精品店</div>
+                                <a href="#" class="map">
+                                    <img src="image/address.png" alt="">
+                                    <span>芝罘区西大街8号负1楼</span>
+                                </a>
+                                <a href="#" class="tel">
+                                    <img src="image/tel.png" alt="">
+                                    <span>20305591</span>
+                                </a>
+                            </div>
+                            <div class="shop_r col-xs-6">
+                                <div class="title">振华商厦精品店</div>
+                                <a href="#" class="map">
+                                    <img src="image/address.png" alt="">
+                                    <span>芝罘区西大街8号负1楼</span>
+                                </a>
+                                <a href="#" class="tel">
+                                    <img src="image/tel.png" alt="">
+                                    <span>20305591</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="shop_r col-xs-6">
-                            <div class="title">振华商厦精品店</div>
-                            <a href="#" class="map">
-                                <img src="image/address.png" alt="">
-                                <span>芝罘区西大街8号负1楼</span>
-                            </a>
-                            <a href="#" class="tel">
-                                <img src="image/tel.png" alt="">
-                                <span>20305591</span>
-                            </a>
+
+                        <div class="row">
+                            <div class="shop_l col-xs-6">
+                                <div class="title">振华商厦精品店</div>
+                                <a href="#" class="map">
+                                    <img src="image/address.png" alt="">
+                                    <span>芝罘区西大街8号负1楼</span>
+                                </a>
+                                <a href="#" class="tel">
+                                    <img src="image/tel.png" alt="">
+                                    <span>20305591</span>
+                                </a>
+                            </div>
+                            <div class="shop_r col-xs-6">
+                                <div class="title">振华商厦精品店</div>
+                                <a href="#" class="map">
+                                    <img src="image/address.png" alt="">
+                                    <span>芝罘区西大街8号负1楼</span>
+                                </a>
+                                <a href="#" class="tel">
+                                    <img src="image/tel.png" alt="">
+                                    <span>20305591</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="row">
+                            <div class="shop_l col-xs-6">
+                                <div class="title">振华商厦精品店</div>
+                                <a href="#" class="map">
+                                    <img src="image/address.png" alt="">
+                                    <span>芝罘区西大街8号负1楼</span>
+                                </a>
+                                <a href="#" class="tel">
+                                    <img src="image/tel.png" alt="">
+                                    <span>20305591</span>
+                                </a>
+                            </div>
+                            <div class="shop_r col-xs-6">
+                                <div class="title">振华商厦精品店</div>
+                                <a href="#" class="map">
+                                    <img src="image/address.png" alt="">
+                                    <span>芝罘区西大街8号负1楼</span>
+                                </a>
+                                <a href="#" class="tel">
+                                    <img src="image/tel.png" alt="">
+                                    <span>20305591</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
+            </div>
         </div>
-    </div>
     </div>
     <!-- 首页内容结束 -->
 
@@ -607,61 +411,61 @@
     </script>
 
     <script type="text/javascript">
-        
-            var that = this;
-            $("#current-area-list").mobiscroll().treelist({
-                theme:'auto',  
-                placeholder:'请选择省份',
-                //showOnTap:true,
-                rows:5,
-                //showInput:false,
-               // showScrollArrows:false,
-               //rtl:true,
-                showOnFocus:true,
-                lang: "zh",
-                display: 'bottom',
-                animate: 'slideup',
-               // setText:"确定",
-               // cancelText:"取消",
-                inputClass: 'tmp',
 
-                // headerText: '请您选择',
-                onSelect: function (valueText, inst) {
-                    var n = inst.getValue();
-                    var $list = $(this).children("li").eq(n[0]);
-                    var m1_id = $list.find("div").attr("data-value");
-                    var m2_id = $list.find("span").eq(n[1]).attr("data-value");
-                    var m3_id = $list.find("span").eq(n[1]).next().find('li').eq(n[2]).attr("data-value");
-                    var value = valueText.split('/');
-                    console.log(valueText, m1_id, value[0], m2_id, value[1], m3_id, value[2]);
+        var that = this;
+        $("#current-area-list").mobiscroll().treelist({
+            theme: 'auto',
+            placeholder: '请选择省份',
+            //showOnTap:true,
+            rows: 5,
+            //showInput:false,
+            // showScrollArrows:false,
+            //rtl:true,
+            showOnFocus: true,
+            lang: "zh",
+            display: 'bottom',
+            animate: 'slideup',
+            // setText:"确定",
+            // cancelText:"取消",
+            inputClass: 'tmp',
 
-                    /*$.post("inc/person.org.php", {apart: "resume_base", current_area: m1+m2, current_areaPID: m1_id, current_areaCID: m2_id}, function (result) { 
-                        if (result == 'ok') { 
-                            $(that).find(".mbase-menu-txt").html(m1+m2); 
-                        } 
-                        else { 
-                            error('网络繁忙，请您稍后再试'); 
-                        } 
-                    });*/
-                    //后端处理部分
-                },
-                formatResult: function (data) {
-                    //自定义输出内容
-                    var $div = $("#current-area-list").children("li").eq(data[0]);
-                    return $div.find('div').text() + '/' + $div.find('span').eq(data[1]).text() + '/' + $div.find('span').eq(data[1]).next().find('li').eq(data[2]).text();
-                }
-            });
+            // headerText: '请您选择',
+            onSelect: function (valueText, inst) {
+                var n = inst.getValue();
+                var $list = $(this).children("li").eq(n[0]);
+                var m1_id = $list.find("div").attr("data-value");
+                var m2_id = $list.find("span").eq(n[1]).attr("data-value");
+                var m3_id = $list.find("span").eq(n[1]).next().find('li').eq(n[2]).attr("data-value");
+                var value = valueText.split('/');
+                console.log(valueText, m1_id, value[0], m2_id, value[1], m3_id, value[2]);
+
+                /*$.post("inc/person.org.php", {apart: "resume_base", current_area: m1+m2, current_areaPID: m1_id, current_areaCID: m2_id}, function (result) { 
+                    if (result == 'ok') { 
+                        $(that).find(".mbase-menu-txt").html(m1+m2); 
+                    } 
+                    else { 
+                        error('网络繁忙，请您稍后再试'); 
+                    } 
+                });*/
+                //后端处理部分
+            },
+            formatResult: function (data) {
+                //自定义输出内容
+                var $div = $("#current-area-list").children("li").eq(data[0]);
+                return $div.find('div').text() + '/' + $div.find('span').eq(data[1]).text() + '/' + $div.find('span').eq(data[1]).next().find('li').eq(data[2]).text();
+            }
+        });
             // $("input[id^=current-area-list]").focus();
-        
-       
+
+
     </script>
     <script>
 
 
 
 
- 
-    
+
+
     </script>
 
 

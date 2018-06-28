@@ -1,0 +1,104 @@
+
+/*首页内容部分开始*/
+
+.content {
+    overflow:hidden;
+    position: relative;
+    top: 65px;
+    background-size: cover;
+    background-image: url("../image/bgt.jpg");
+}
+
+/*首页banner部分开始*/
+
+.content .banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 44% 0;
+}
+/*首页banner部分结束*/
+.contact .main{
+    background:#fff;
+    margin: 25px 15px;
+    /* padding-right:15px; */
+    padding-bottom:10px;
+}
+
+.model1,.model2{
+    border-bottom:1px solid #eee;
+}
+.model1 .title,
+.model2 .title,
+.model3 .title{
+    color:#1a1a1a;
+    font:800 14px "PingFang-SC";
+    margin-top:15px;
+}
+.model1 .model1_l{
+    padding-right:0;
+}
+.model1 .address,
+.model1 .tel,
+.model2 .tel
+.model3 .tel{
+    overflow:hidden;
+}
+.model1 span{
+    /* float:left; */
+    font:550 12px "PingFang SC";
+    color:#333;
+}
+.model1 .left,.model2 .left,.model3 .left{
+    float:left;
+    height:45px;
+    text-align:left;
+}
+.model1 .tel .left,
+.model2 .tel .left,
+.model3 .tel .left{
+    height:30px;
+}
+.model .right{
+    float:right;
+}
+
+/* .model1 .address,.model1 .tel{
+    display:inline-block;
+    height:40px;
+    width:50px;
+} */
+
+.model1 .model1_r{
+    overflow:hidden;
+}
+.model1 img{
+    width:100%;
+    height:100px;
+    margin:25px auto;
+    margin-right:15px;
+}
+
+.model2 .title,
+.model3 .title{
+    color:#d3101e;
+    margin-left:15px;
+}
+.model2 p,
+.model2 span,
+.model3 span{
+    font:550 12px "PingFang SC";
+    color:#766365;
+    /* line-height:14px; */
+    word-break: break-all; 
+    word-wrap:break-word;
+    overflow:auto;
+}
+.model3 p{
+    height:16px;
+}
+.model3 .row .col-xs-12{
+    height:25px;
+}
+
+/*联系我们内容部分结束*/

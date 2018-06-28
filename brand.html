@@ -14,10 +14,6 @@
     <script src="js/lib/bootstrap.js"></script>
     <script src="js/lib/swiper.min.js"></script>
     <script src="js/util/clamp.js"></script>
-    <style>
-     
-    </style>
-
 </head>
 
 
@@ -107,20 +103,38 @@
                     <!-- 轮播图部分开始 -->
 
                     <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide"><img src="image/brand3.png" alt=""></div>
-                              <div class="swiper-slide"><img src="image/brand3.png" alt=""></div>
-                              <div class="swiper-slide"><img src="image/brand3.png" alt=""></div>
-                              <div class="swiper-slide"><img src="image/brand3.png" alt=""></div>
-                              <div class="swiper-slide"><img src="image/brand3.png" alt=""></div>
-                              <div class="swiper-slide"><img src="image/brand3.png" alt=""></div>
-                              <div class="swiper-slide"><img src="image/brand3.png" alt=""></div>
-                              <div class="swiper-slide"><img src="image/brand3.png" alt=""></div>
-                              <div class="swiper-slide"><img src="image/brand3.png" alt=""></div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="image/brand3.png" alt="">
                             </div>
-                            <!-- Add Pagination -->
-                            <div class="swiper-pagination"></div>
-                          </div>
+                            <div class="swiper-slide">
+                                <img src="image/brand3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="image/brand3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="image/brand3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="image/brand3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="image/brand3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="image/brand3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="image/brand3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="image/brand3.png" alt="">
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
                     <!-- 轮播图部分结束 -->
                 </div>
 
@@ -194,7 +208,7 @@
             centeredSlides: true,
             spaceBetween: 300,
             initialSlide: 0,
-            width:250,
+            width: 250,
 
             pagination: {
                 el: '.model1 .swiper-pagination',
@@ -206,7 +220,7 @@
             },
         });
 
-        // 模式2中的轮播图显示2个
+        // 模式2中的轮播图显示1个
         new Swiper('.model2 .swiper-container', {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -222,9 +236,9 @@
                 prevEl: '.model2 .swiper-button-prev',
             },
             autoplay: {
-			delay: 3000,//秒            
-			disableOnInteraction: true,//滑动不会失效
-		}
+                delay: 3000,//秒            
+                disableOnInteraction: true,//滑动不会失效
+            }
         });
 
         // 模式3中的轮播图显示2个

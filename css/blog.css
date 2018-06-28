@@ -130,18 +130,25 @@
 
 .blog #article ul{
     list-style: disc;
+    width:100%;
 }
 .blog #article li{
+    /* width:100%; */
     margin-left:10%;
     margin-top:25px;
+}
+.blog #article li:first-child{
+    margin-top: 0;
 }
 .blog #article li p:first-child{
     color:#5a281b;
     font:700 14px "PingFang-SC";
 }
 .blog #article li p.substance{
+    margin: 0 auto;
     color:#333;
     font:100 12px "PingFang-SC-Medium";
     line-height:16px;
+    margin-right:15px;
 
 }

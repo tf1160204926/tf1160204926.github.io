@@ -31,10 +31,10 @@
 
                 <!-- tab栏切换 -->
                 <ul id="myTab" class="nav nav-tabs">
-                    <li class="active">
+                    <li id="tab_left" class="active">
                         <a href="#news" data-toggle="tab">最新资讯</a>
                     </li>
-                    <li>
+                    <li id="tab_right">
                         <a href="#article" data-toggle="tab">美文推荐</a>
                     </li>
                 </ul>
@@ -162,5 +162,23 @@
         for (var i = 0; i < pointsArr_con.length; i++) {
             $clamp(pointsArr_con[i], { clamp: 1, useNativeClamp: false });
         }
+
+    </script>
+    <script>
+        window.onload=function(){
+            $("#article").hide();
+            $("#tab_right").click(function(){
+                $("#article").show();
+                $("#news").hide();
+            })
+            $("#tab_left").click(function(){
+                $("#article").hide();
+               $("#news").show();
+            })
+            
+        }
+        
+    
+    
     </script>
 </body>
